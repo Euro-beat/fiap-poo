@@ -1,8 +1,62 @@
 package br.com.fiapride.model;
 
 public class Cavalo {
-	
-	public String raca;
-	public char sexo;
-	public boolean selvagem;
+
+    private String raca;
+    private char sexo;
+    private boolean selvagem = true; //cavalo selvagem por padrão (caso não seja definido na criação do objeto)
+    private boolean cansado = false; //cavalo descansado por padrão (caso não seja definido na criação do objeto)
+
+    public String getRaca() {
+        return raca; //todo: validar a entrada entre F e M, para conseguir fazer feature de cansado(a) em galopar()
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public boolean isSelvagem() {
+        return selvagem;
+    }
+
+    public void setSelvagem(boolean selvagem) {
+        this.selvagem = selvagem;
+    }
+
+    public boolean isCansado() {
+        return cansado;
+    }
+
+    public void setCansado(boolean cansado) {
+        this.cansado = cansado; //todo: mudar de false/true para int com ranges de classificação(descansado-ofegante-exausto)?
+    }
+
+    public void galopar() {
+        if (!isCansado()) {
+            this.cansado = true;
+            System.out.println("pocotó, pocotó, pocotó... até cansar!");
+        }
+        else {
+            System.out.println("*cof* *cof* preciso *cof* relinchar *cof* muito cansado..."); //todo: validar a entrada entre F e M, para conseguir fazer feature de cansado(a) em galopar()
+        }
+    }
+
+    public void relinchar() {
+        if (isCansado()) {
+            this.cansado = false;
+            System.out.println("*sons intensos de cavalo RELAXADO*");
+        }
+        else {
+            System.out.println("*sons intensos de cavalo*");
+        }
+    }
+
 }
