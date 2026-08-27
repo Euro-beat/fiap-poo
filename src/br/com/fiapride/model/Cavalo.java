@@ -11,7 +11,7 @@ public class Cavalo {
         return raca; //todo: validar a entrada entre F e M, para conseguir fazer feature de cansado(a) em galopar()
     }
 
-    public void setRaca(String raca) {
+    private void setRaca(String raca) {
         this.raca = raca;
     }
 
@@ -19,7 +19,7 @@ public class Cavalo {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    private void setSexo(char sexo) {
         this.sexo = sexo;
     }
 
@@ -27,7 +27,7 @@ public class Cavalo {
         return selvagem;
     }
 
-    public void setSelvagem(boolean selvagem) {
+    private void setSelvagem(boolean selvagem) {
         this.selvagem = selvagem;
     }
 
@@ -35,7 +35,7 @@ public class Cavalo {
         return cansado;
     }
 
-    public void setCansado(boolean cansado) {
+    private void setCansado(boolean cansado) {
         this.cansado = cansado; //todo: mudar de false/true para int com ranges de classificação(descansado-ofegante-exausto)?
     }
 
