@@ -2,7 +2,7 @@
 Seguindo a ideia de abstração trabalhada nas aulas, a classe Cavalo() tem o objetivo de facilitar a criação de inúmeros objetos que possuem alguns atributos e métodos (funções) selecionados, que têm relação ao animal existente.
 
 # Representação do objeto na vida real
-<img alt="horsie" height="550" src=".github/img/3.png"/>
+<img alt="horsie" height="550" src=".github/img/3_resized.jpg"/>
 <br>
 <i>(literalmente)</i>
 
