@@ -7,6 +7,13 @@ public class Cavalo {
     private boolean selvagem = true; //cavalo selvagem por padrão (caso não seja definido na criação do objeto)
     private boolean cansado = false; //cavalo descansado por padrão (caso não seja definido na criação do objeto)
 
+    public Cavalo (String raca, char sexo, boolean selvagem, boolean cansado) {
+        this.setRaca(raca);
+        this.setSexo(sexo);
+        this.setSelvagem(selvagem);
+        this.setCansado(cansado);
+    }
+
     public String getRaca() {
         return raca; //todo: validar a entrada entre F e M, para conseguir fazer feature de cansado(a) em galopar()
     }
@@ -20,7 +27,14 @@ public class Cavalo {
     }
 
     private void setSexo(char sexo) {
-        this.sexo = sexo;
+        sexo = Character.toUpperCase(sexo);
+
+        if (sexo != 'M' && sexo != 'F') {
+            System.out.println("Erro: sexo do cavalo não reconhecido.");
+        }
+        else {
+            this.sexo = sexo;
+        }
     }
 
     public boolean isSelvagem() {

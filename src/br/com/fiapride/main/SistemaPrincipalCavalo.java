@@ -6,19 +6,10 @@ public class SistemaPrincipalCavalo {
 
     public static void main(String[] args) {
 
-        Cavalo pePano = new Cavalo();
-        Cavalo tempestade = new Cavalo();
+        Cavalo pePano = new Cavalo("Mangalarga Paulista", 'F', false, false);
+        Cavalo tempestade = new Cavalo("Árabe", 'm', true, false);
 
-        //-----------------------------------------------------------
 
-        pePano.setRaca("Mangalarga Paulista");
-        pePano.setSexo('F');
-        pePano.setSelvagem(false);
-
-        tempestade.setRaca("Árabe");
-        tempestade.setSexo('M');
-
-        //-----------------------------------------------------------
 
         System.out.println("Cansaço pePano: "+ pePano.isCansado());
         System.out.println("Cansaço tempestade: "+ tempestade.isCansado());
